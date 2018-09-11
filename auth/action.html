@@ -1,7 +1,24 @@
 <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // TODO: Implement getParameterByName()
+    function getParameterByName(name) {
+      var res = new RegExp(
+          // Parameter names always start after a ? or &.
+          '[\?&]' +
+
+          // Make sure any [ or ] are escaped in the name.
+          name.replace(/\[/g, '\\\[').replace(/\]/g, '\\\]') +
+
+          // Either match a =... or match an empty value.
+          // Values can be terminated by an & a # or the end of the string ($).
+          '(?:=([^&#]*))?(?:[&#]|$)'
+      ).exec(window.location.search);
+
+      return res ?
+        (res[1] ? // res[1] will be undefined for a parameter without value.
+          decodeURIComponent(res[1].replace(/\+/g, ' ')) : ''
+        ) : null;
+    }
 
     // Get the action to complete.
     var mode = getParameterByName('mode');
