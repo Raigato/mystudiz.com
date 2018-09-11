@@ -11,3 +11,35 @@ h2 {
 img {
   padding-right: 30px;
 }
+
+.verify-account {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.reset-password {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+}
+
+.error-display {
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}

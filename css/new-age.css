@@ -458,6 +458,16 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   background-color: #3fc1c9;
 }
 
+.btn-secondary {
+  background-color: #fc5185;
+  border-color: #fc5185;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+  border-color: #fb1f62;
+  background-color: #fb1f62;
+}
+
 .btn {
   border-radius: 300px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
