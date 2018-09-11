@@ -61,7 +61,7 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
   auth.verifyPasswordResetCode(actionCode).then(function(email) {
     var accountEmail = email;
 
-    document.getElementById('verifyAccount').style.display = 'block'
+    document.getElementById('resetPassword').style.display = 'block'
   
   }).catch(function(error) {
     // Invalid or expired action code. Ask user to try to reset the password
@@ -97,7 +97,7 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
   auth.applyActionCode(actionCode).then(function(resp) {
     // Email address has been verified.
 
-    document.write("Your email has been verified")
+    document.getElementById('verifyAccount').style.display = 'block'
     // You could also provide the user with a link back to the app.
 
     // TODO: If a continue URL is available, display a button which on
