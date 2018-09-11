@@ -25,26 +25,26 @@
     <div class="header">
         <h1><img src="../img/favicon/favicon-96x96.png">Studiz</h1>
     </div>
+    <div id="errorDisplay" class="card text-white bg-danger mb-3 error-display" style="max-width: 18rem;">
+        <div class="card-body" id="errorMessage">
+          An error has occured!
+        </div>
+      </div>
     <div id="verifyAccount" class="verify-account">
       <h2>Thank you!<br/>Your account has been successfully verified.</h2>
     </div>
     <div class="reset-password" id="resetPassword">
-        <div class="card text-white bg-danger mb-3 error-display" style="max-width: 18rem;">
-          <div class="card-body" id="errorMessage">
-            An error has occured!
+        <form id="newPasswordForm">
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" class="form-control" id="newPassword" aria-describedby="passwordHelp" placeholder="Enter new password" name="newPassword">
           </div>
-        </div>
-        <form>
-            <div class="form-group">
-              <label for="newPassword">New Password</label>
-              <input type="password" class="form-control" id="newPassword" aria-describedby="passwordHelp" placeholder="Enter new password">
-            </div>
-            <div class="form-group">
-              <label for="verifyPassword">Verify Password</label>
-              <input type="password" class="form-control" id="verifyPassword" placeholder="Re-type new password">
-            </div>
-            <button type="submit" class="btn btn-secondary btn-xl">Submit</button>
-          </form>
+          <div class="form-group">
+            <label for="verifyPassword">Verify Password</label>
+            <input type="password" class="form-control" id="verifyPassword" placeholder="Re-type new password" name="verifyPassword">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-xl">Submit</button>
+        </form>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
