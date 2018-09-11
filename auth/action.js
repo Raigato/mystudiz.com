@@ -81,9 +81,13 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
           // additional state determined from that URL's parameters.
         }).catch(function(error) {
           showError(error.message)
+          document.getElementById('newPassword').value = ""
+          document.getElementById('verifyPassword').value = ""
         });
       } else {
         showError("Two different passwords received.")
+        document.getElementById('newPassword').value = ""
+        document.getElementById('verifyPassword').value = ""
       }
     }
 
