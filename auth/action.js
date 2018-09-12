@@ -71,6 +71,7 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
         // Save the new password.
         auth.confirmPasswordReset(actionCode, form.newPassword.value).then(function(resp) {
           // Password reset has been confirmed and new password updated.
+          document.getElementById('resetPassword').style.display = 'none'
           showSuccess("Your password has been successfully reset!")
         }).catch(function(error) {
           showError(error.message)
