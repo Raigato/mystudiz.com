@@ -99,7 +99,7 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
   auth.applyActionCode(actionCode).then(function(resp) {
     // Email address has been verified.
 
-    showSuccess("Thank you!<br/>Your account has been successfully verified.")
+    showSuccess("Thank you!\nYour account has been successfully verified.")
   }).catch(function(error) {
     // Code is invalid or expired. Ask the user to verify their email address
     // again.
