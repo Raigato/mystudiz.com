@@ -67,12 +67,11 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
 
     form.onsubmit = function(event) {
       event.preventDefault()
-      console.log(form.newPassword.value)
-      console.log(form.verifyPassword.value)
       if (form.newPassword.value === form.verifyPassword.value) {
         // Save the new password.
-        auth.confirmPasswordReset(actionCode, form.newPassword).then(function(resp) {
+        auth.confirmPasswordReset(actionCode, form.newPassword.value).then(function(resp) {
           // Password reset has been confirmed and new password updated.
+          showSuccess("Your password has been successfully reset!")
 
           // TODO: Display a link back to the app, or sign-in the user directly
           // if the page belongs to the same domain as the app:
@@ -96,6 +95,7 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
   }).catch(function(error) {
     // Invalid or expired action code. Ask user to try to reset the password
     // again.
+    showError(error.message)
   });
 }
 
@@ -115,6 +115,7 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
   }).catch(function(error) {
     // Code is invalid or expired. Ask the user to verify their email address
     // again.
+    showError(error.message)
   });
 }
 
