@@ -67,9 +67,9 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
 
     form.onsubmit = function(event) {
       event.preventDefault()
-      console.log(form.newPassword)
-      console.log(form.verifyPassword)
-      if (form.newPassword === form.verifyPassword) {
+      console.log(form.newPassword.value)
+      console.log(form.verifyPassword.value)
+      if (form.newPassword.value === form.verifyPassword.value) {
         // Save the new password.
         auth.confirmPasswordReset(actionCode, form.newPassword).then(function(resp) {
           // Password reset has been confirmed and new password updated.
