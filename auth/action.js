@@ -106,7 +106,7 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
   auth.applyActionCode(actionCode).then(function(resp) {
     // Email address has been verified.
 
-    document.getElementById('verifyAccount').style.display = 'block'
+    showSuccess("Thank you!<br/>Your account has been successfully verified.")
     // You could also provide the user with a link back to the app.
 
     // TODO: If a continue URL is available, display a button which on
@@ -116,6 +116,11 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
     // Code is invalid or expired. Ask the user to verify their email address
     // again.
   });
+}
+
+function showSuccess(message) {
+  document.getElementById('successMessage').innerText = message
+  document.getElementById('successDisplay').style.display = 'block'
 }
 
 function showError(errorMessage) {
