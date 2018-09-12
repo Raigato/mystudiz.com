@@ -212,6 +212,7 @@ section.download h2 {
 section.download .badges .badge-link {
   display: block;
   margin-bottom: 25px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 section.download .badges .badge-link:last-child {
@@ -350,16 +351,20 @@ section.contact ul.list-social li a {
   border-radius: 100%;
 }
 
-section.contact ul.list-social li.social-twitter a {
-  background-color: #1da1f2;
+section.contact ul.list-social li.social-instagram a {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-section.contact ul.list-social li.social-twitter a:hover {
-  background-color: #0d95e8;
+section.contact ul.list-social li.social-instagram a:hover {
+  background: #c0208f;
+  background: radial-gradient(circle at 30% 107%, #fdf38d 0%, #fdf38d 5%, #fd503f 45%, #cd2399 60%, #1f53ea 90%);
 }
 
 section.contact ul.list-social li.social-facebook a {
   background-color: #3b5998;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 section.contact ul.list-social li.social-facebook a:hover {
@@ -367,16 +372,18 @@ section.contact ul.list-social li.social-facebook a:hover {
 }
 
 section.contact ul.list-social li.social-email a {
-  background-color: #fc5185;
+  background-color: #3fc1c9;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 section.contact ul.list-social li.social-email a:hover {
-  background-color: #fc3873;
+  background-color: #2f9fa6;
 }
 
 section.contact .badges .badge-link {
   display: block;
   margin-bottom: 25px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 section.contact .badges .badge-link:last-child {
