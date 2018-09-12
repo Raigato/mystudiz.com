@@ -72,14 +72,6 @@ function handleResetPassword(auth, actionCode, continueUrl, lang) {
         auth.confirmPasswordReset(actionCode, form.newPassword.value).then(function(resp) {
           // Password reset has been confirmed and new password updated.
           showSuccess("Your password has been successfully reset!")
-
-          // TODO: Display a link back to the app, or sign-in the user directly
-          // if the page belongs to the same domain as the app:
-          // auth.signInWithEmailAndPassword(accountEmail, newPassword);
-
-          // TODO: If a continue URL is available, display a button which on
-          // click redirects the user back to the app via continueUrl with
-          // additional state determined from that URL's parameters.
         }).catch(function(error) {
           showError(error.message)
           document.getElementById('newPassword').value = ""
@@ -107,11 +99,6 @@ function handleVerifyEmail(auth, actionCode, continueUrl, lang) {
     // Email address has been verified.
 
     showSuccess("Thank you!<br/>Your account has been successfully verified.")
-    // You could also provide the user with a link back to the app.
-
-    // TODO: If a continue URL is available, display a button which on
-    // click redirects the user back to the app via continueUrl with
-    // additional state determined from that URL's parameters.
   }).catch(function(error) {
     // Code is invalid or expired. Ask the user to verify their email address
     // again.
