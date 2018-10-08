@@ -376,6 +376,15 @@ section.contact ul.list-social li.social-email a:hover {
   background-color: #2f9fa6;
 }
 
+section.contact ul.list-social li.social-twitter a {
+  background-color: #1da1f2;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+section.contact ul.list-social li.social-twitter a:hover {
+  background-color: #0d95e8;
+}
+
 section.contact .badges .badge-link {
   display: block;
   margin-bottom: 25px;
